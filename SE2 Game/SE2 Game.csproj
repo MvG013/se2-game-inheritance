@@ -50,6 +50,12 @@
     <Compile Include="Entity\Action.cs" />
     <Compile Include="Entity\Character.cs" />
     <Compile Include="Entity\Enemy.cs" />
+    <Compile Include="Entity\Gear\Broek.cs" />
+    <Compile Include="Entity\Gear\Gear.cs" />
+    <Compile Include="Entity\Gear\harnas.cs" />
+    <Compile Include="Entity\Gear\Helm.cs" />
+    <Compile Include="Entity\Gear\Schild.cs" />
+    <Compile Include="Entity\Icarryable.cs" />
     <Compile Include="Game\Map\Cell.cs" />
     <Compile Include="Entity\Player.cs" />
     <Compile Include="Form1.cs">

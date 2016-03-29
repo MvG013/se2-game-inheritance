@@ -18,6 +18,7 @@ namespace SE2_Game.Entity
         private int hitPoints;
         private Font font = new Font("Arial", 8);
         public StringFormat stringFormat = new StringFormat();
+        public List<Icarryable> gear = new List<Icarryable>();
         public Point Position { get; set; }
 
         public int HitPoints

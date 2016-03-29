@@ -1,12 +1,17 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using SE2_Game.Game;
+using SE2_Game.Entity.Gear;
 
 namespace SE2_Game.Entity
 {
     public class Player:Character
     {
-         
+
+        public int MaxWeight;
+        public int Weight;
+        public int Armor = 0;
+
         private Action CurrentAction
         {
             get
@@ -27,8 +32,10 @@ namespace SE2_Game.Entity
 
         public Player()
         {
+            this.MaxWeight = 6;
             HitPoints = 100;
             brush = new SolidBrush(Color.FromArgb(61, 123, 160));
+
 
             // Make drawn string appear centered in the positioning rectangle.
             stringFormat.Alignment = StringAlignment.Center;

@@ -4,6 +4,7 @@ using System.Drawing;
 using SE2_Game.Game.Map;
 using SE2_Game.Entity;
 using System.Collections.Generic;
+using SE2_Game.Entity.Gear;
 
 namespace SE2_Game.Game
 {
@@ -11,9 +12,10 @@ namespace SE2_Game.Game
     {
         public Grid Grid { get; private set; }
         public Player Player { get; private set; }
-        public List<Enemy> Enemy { get; private set; }
+        public List<Enemy> Enemy = new List<Enemy>();
+        public List<Icarryable> Gear = new List<Icarryable>();
 
- 
+
 
         public bool GameWon
         {
@@ -60,7 +62,6 @@ namespace SE2_Game.Game
         /// </summary>
         private World()
         {
-            Enemy = new List<Enemy>{};
         }
 
         /// <summary>
@@ -79,6 +80,10 @@ namespace SE2_Game.Game
             {
                 Enemy.Add(new Enemy(World.Instance.Grid.FreePosition()));
             }
+                Gear.Add(new Helm(World.Instance.Grid.FreePosition()));
+                Gear.Add(new Schild(World.Instance.Grid.FreePosition()));
+                Gear.Add(new Harnas(World.Instance.Grid.FreePosition()));
+                Gear.Add(new Broek(World.Instance.Grid.FreePosition()));
 
             this.stopwatch.Start();
         }
@@ -96,8 +101,77 @@ namespace SE2_Game.Game
 
                 if (this.Player.Position.Equals(enemy.Position))
                 {
-                    this.Player.HitPoints -= 5;
+                    if (Player.Armor == 0)
+                    {
+                        this.Player.HitPoints -= 10;
+                    }
+                    else
+                    {
+                        int dmg = Player.Armor - 10;
+                        this.Player.HitPoints += dmg;
+                    }
                 }
+
+                foreach (var Helm in Gear)
+                {
+                    if (this.Player.Position.Equals(Helm.Position))
+                    {
+                        if (Player.Weight + Helm.Weight <= Player.MaxWeight)
+                        {
+                            Player.gear.Add(Helm);
+                            Player.Weight += Helm.Weight;
+                            Player.Armor += Helm.ArmorUp;
+                            Gear.Remove(Helm);
+                            return;
+                        }
+                    }
+                }
+
+                foreach (var Broek in Gear)
+                {
+                    if (this.Player.Position.Equals(Broek.Position))
+                    {
+                        if (Player.Weight + Broek.Weight <= Player.MaxWeight)
+                        {
+                            Player.gear.Add(Broek);
+                            Player.Weight += Broek.Weight;
+                            Player.Armor += Broek.ArmorUp;
+                            Gear.Remove(Broek);
+                            return;
+                        }
+                    }
+                }
+
+                foreach (var Harnas in Gear)
+                {
+                    if (this.Player.Position.Equals(Harnas.Position))
+                    {
+                        if (Player.Weight + Harnas.Weight <= Player.MaxWeight)
+                        {
+                            Player.gear.Add(Harnas);
+                            Player.Weight += Harnas.Weight;
+                            Player.Armor += Harnas.ArmorUp;
+                            Gear.Remove(Harnas);
+                            return;
+                        }
+                    }
+                }
+
+                foreach (var Schild in Gear)
+                {
+                    if (this.Player.Position.Equals(Schild.Position))
+                    {
+                        if (Player.Weight + Schild.Weight <= Player.MaxWeight)
+                        {
+                            Player.gear.Add(Schild);
+                            Player.Weight += Schild.Weight;
+                            Player.Armor += Schild.ArmorUp;
+                            Gear.Remove(Schild);
+                            return;
+                        }
+                    }
+                }
+
             }
 
 
@@ -111,12 +185,19 @@ namespace SE2_Game.Game
         {
             this.Grid.Draw(g);
 
+
             foreach (var enemy in Enemy)
             {
                 enemy.Draw(g);
             }
 
             this.Player.Draw(g);
+
+            foreach (var Armor in Gear)
+            {
+                Armor.Draw(g);
+            }
+
         }
 
         private int input()
