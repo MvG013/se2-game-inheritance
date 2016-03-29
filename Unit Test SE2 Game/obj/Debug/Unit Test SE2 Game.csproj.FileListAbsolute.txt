@@ -1,0 +1,7 @@
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\obj\Debug\Unit Test SE2 Game.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\bin\Debug\Unit Test SE2 Game.dll
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\bin\Debug\Unit Test SE2 Game.pdb
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\bin\Debug\SE2 Game.exe
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\bin\Debug\SE2 Game.pdb
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\obj\Debug\Unit Test SE2 Game.dll
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\Unit Test SE2 Game\obj\Debug\Unit Test SE2 Game.pdb

@@ -24,3 +24,10 @@ E:\Fontys\Periode 3\se2_game-inheritance\SE2 Game\obj\Debug\SE2 Game.pdb
 C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\bin\Debug\SE2 Game.exe.config
 C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2 Game.exe
 C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2 Game.pdb
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\bin\Debug\SE2 Game.exe
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\bin\Debug\SE2 Game.pdb
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2 Game.csprojResolveAssemblyReference.cache
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2_Game.Form1.resources
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2_Game.Input.resources
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2_Game.Properties.Resources.resources
+C:\Users\Marc\Documents\GitHub\se2-game-inheritance\SE2 Game\obj\Debug\SE2 Game.csproj.GenerateResource.Cache

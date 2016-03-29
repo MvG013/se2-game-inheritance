@@ -16,7 +16,7 @@ namespace Unit_Test_SE2_Game.Game
             // shall contain the goal.
             World.Instance.Create(new Size(20, 10), new Size(2, 1), 0);
             Assert.AreNotEqual(World.Instance.Player.Position,
-                World.Instance.Enemy.Position,
+                World.Instance.Grid.GoalPosition,
                 "Enemy should not be positioned on top of player.");
         }
 
@@ -36,12 +36,13 @@ namespace Unit_Test_SE2_Game.Game
         [TestMethod]
         public void TestUpdate()
         {
+            Assert.AreEqual(World.Instance.Enemy[0].Position,
+            World.Instance.Enemy[0].Position);
             // TODO: Implement this when interfaces have been explained.
             // We don't yet test this method because it is coded to return
             // randomized results. There is a way to account for this, but the
             // solution will use interfaces: a concept that is not yet
             // discussed in class. To be implemented.
-            Assert.Inconclusive("Implement this when interfaces have been explained");
         }
     }
 }

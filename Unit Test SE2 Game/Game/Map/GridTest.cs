@@ -69,4 +69,9 @@ namespace Unit_Test_SE2_Game.Game.Map
             Assert.Inconclusive("Implement this when interfaces have been explained");
         }
     }
+
+    public interface A
+    {
+        void Test3();
+    }
 }
